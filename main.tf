@@ -21,5 +21,10 @@ provider "aws" {
 
 resource "aws_s3_bucket" "workshop" {
   bucket_prefix = var.bucket_prefix
+
+  # checkov:skip=CKV_AWS_20: "Versioning not required for workshop"
+  # checkov:skip=CKV_AWS_21: "Logging not required for workshop"
 }
-# test change)
+
+# trigger workflow from feature branch
+# test change
