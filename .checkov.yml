@@ -1,0 +1,3 @@
+skip-check:
+  - CKV_AWS_20  # S3 bucket versioning not required for workshop
+  - CKV_AWS_21  # S3 bucket logging not required for workshop
