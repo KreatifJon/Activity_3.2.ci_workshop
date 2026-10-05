@@ -24,7 +24,8 @@ resource "aws_s3_bucket" "workshop" {
 
   # checkov:skip=CKV_AWS_20: "Versioning not required for workshop"
   # checkov:skip=CKV_AWS_21: "Logging not required for workshop"
+  # checkov:skip=CKV_AWS_18: "Access logging not required for workshop"
+  # checkov:skip=CKV_AWS_144: "Replication not required for workshop"
+  # checkov:skip=CKV2_AWS_61: "Lifecycle configuration not required for workshop"
 }
-
-# trigger workflow from feature branch
-# test change
+ 
