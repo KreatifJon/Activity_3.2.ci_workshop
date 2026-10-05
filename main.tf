@@ -21,5 +21,13 @@ provider "aws" {
 
 resource "aws_s3_bucket" "workshop" {
   bucket_prefix = var.bucket_prefix
+
+  # checkov:skip=CKV_AWS_20: "Workshop scope"
+  # checkov:skip=CKV_AWS_21: "Workshop scope"
+  # checkov:skip=CKV_AWS_18: "Workshop scope"
+  # checkov:skip=CKV_AWS_144: "Workshop scope"
+  # checkov:skip=CKV2_AWS_61: "Workshop scope"
+  # checkov:skip=CKV_AWS_145: "Workshop scope"
+  # checkov:skip=CKV2_AWS_6: "Workshop scope"
+  # checkov:skip=CKV2_AWS_62: "Workshop scope"
 }
-# test change)

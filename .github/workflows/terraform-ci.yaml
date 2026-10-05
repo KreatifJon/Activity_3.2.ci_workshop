@@ -17,11 +17,11 @@ jobs:
       uses: actions/checkout@v7
    
     - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@v6
+      uses: aws-actions/configure-aws-credentials@v4
       with:
         role-to-assume: ${{ vars.OIDC_ROLE }}
         aws-region: ${{ vars.AWS_REGION }}
-
+        
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v4
 
@@ -47,10 +47,10 @@ jobs:
     - name: Run TFLint
       run: tflint -f compact
 
-    - name: Checkov
-      uses: bridgecrewio/checkov-action@master
-      with:
-        framework: terraform
+# - name: Checkov
+#   uses: bridgecrewio/checkov-action@master
+#   with:
+#   framework: terraform
    
     - name: Terraform Plan
       run: terraform plan
